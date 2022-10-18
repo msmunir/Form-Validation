@@ -68,7 +68,7 @@ const validatePass = (id) => {
         return false;
     }
     else if(!password.value.match(passEx)) {
-        console.log('Password must contain atleast 6 characters, includes number, lowercase, uppercase letter.');
+        console.log('Password must contain atleast 6 characters, including number, lowercase, uppercase letter.');
         return false;
     }
     else {  
@@ -95,7 +95,7 @@ const validateCheck = (id) => {
     const checkBox = document.querySelector(id);
     
     if(!checkBox.checked){
-        console.log('You must accept the term and condition.');
+        console.log('You must accept the terms and condition.');
          return false;
     }
     else{
@@ -114,7 +114,7 @@ form.addEventListener('submit', (e) => {
         const formType = form[i].type;
         
         if(formType == 'text'){
-            
+  
             if( form[i].id === 'lastName'){
                 errors[i] = validateTextLastName(inputId);
             }
@@ -153,6 +153,7 @@ form.addEventListener('submit', (e) => {
             email:      email.value,
             password: password.value
         }
+        console.log("Congratulation! your validation is successfull.");
         console.log(user);
     }
 });
